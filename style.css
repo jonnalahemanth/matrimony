@@ -604,6 +604,11 @@ a {
   margin-top: 2rem;
 }
 
+.cards-compact {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
 .cards-light .card {
   background: rgba(255, 255, 255, 0.7);
 }
@@ -616,6 +621,12 @@ a {
   background: rgba(255, 255, 255, 0.62);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55);
   transition: transform var(--transition), border-color var(--transition), background var(--transition);
+}
+
+.cards-compact .card {
+  min-height: 88px;
+  padding: 0.8rem 0.9rem 0.85rem;
+  border-radius: 18px;
 }
 
 .card:hover {
@@ -642,6 +653,12 @@ a {
   text-transform: uppercase;
 }
 
+.cards-compact .clabel {
+  margin-bottom: 0.35rem;
+  font-size: 0.58rem;
+  letter-spacing: 0.14em;
+}
+
 .light .clabel {
   color: var(--rosewood);
 }
@@ -652,6 +669,11 @@ a {
   font-size: clamp(1.18rem, 2vw, 1.4rem);
   line-height: 1.35;
   font-weight: 600;
+}
+
+.cards-compact .cval {
+  font-size: clamp(1rem, 1.6vw, 1.14rem);
+  line-height: 1.2;
 }
 
 .light .cval {
@@ -722,6 +744,7 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 0.65rem;
   min-height: 52px;
   padding: 0.85rem 1.4rem;
   border-radius: 999px;
@@ -733,6 +756,20 @@ a {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   transition: transform var(--transition), border-color var(--transition), background var(--transition), color var(--transition);
+}
+
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.btn-icon svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
 }
 
 .btn:hover {
@@ -752,6 +789,30 @@ a {
 
 .btn-soft {
   background: rgba(255, 255, 255, 0.5);
+}
+
+.btn-whatsapp {
+  background: #25d366;
+  border-color: #25d366;
+  color: #ffffff;
+}
+
+.btn-whatsapp:hover {
+  background: #1ebe5d;
+  border-color: #1ebe5d;
+  color: #ffffff;
+}
+
+.btn-linkedin {
+  background: #0a66c2;
+  border-color: #0a66c2;
+  color: #ffffff;
+}
+
+.btn-linkedin:hover {
+  background: #0958a7;
+  border-color: #0958a7;
+  color: #ffffff;
 }
 
 .footer {
@@ -800,6 +861,10 @@ a {
 
   .summary-panels {
     grid-template-columns: 1fr;
+  }
+
+  .cards-compact {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .gitem,
@@ -869,6 +934,11 @@ a {
     grid-template-columns: 1fr;
   }
 
+  .cards-compact {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.55rem;
+  }
+
   .gitem {
     min-height: 300px;
   }
@@ -876,6 +946,22 @@ a {
   .card,
   .card.wide {
     grid-column: auto;
+  }
+
+  .cards-compact .card {
+    min-height: 74px;
+    padding: 0.68rem 0.72rem 0.7rem;
+  }
+
+  .cards-compact .clabel {
+    font-size: 0.52rem;
+    margin-bottom: 0.25rem;
+    letter-spacing: 0.12em;
+  }
+
+  .cards-compact .cval {
+    font-size: 0.98rem;
+    line-height: 1.15;
   }
 
   .summary-grid > div {
